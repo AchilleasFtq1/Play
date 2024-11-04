@@ -1,0 +1,29 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Invisible Camera View for background human detection -->
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/camera_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" /> <!-- Hidden camera view -->
+
+    <!-- Centered logo to be displayed when no person is detected -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_logo" />
+
+    <!-- ExoPlayer Video Player View -->
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/videoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" /> <!-- Initially hidden, shown when video starts playing -->
+
+</RelativeLayout>

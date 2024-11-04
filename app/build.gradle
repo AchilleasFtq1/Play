@@ -1,0 +1,64 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.api.play'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.api.play"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation libs.quickbirdstudios.opencv
+    implementation libs.recyclerview.v140alpha01
+        // CameraX core library
+        implementation "androidx.camera:camera-core:1.1.0"
+
+        // Camera2 API support for CameraX
+        implementation "androidx.camera:camera-camera2:1.1.0"
+
+        // CameraX lifecycle library (allows CameraX to respect the Android lifecycle)
+        implementation "androidx.camera:camera-lifecycle:1.1.0"
+
+        // Optional: CameraX view library for preview (if needed elsewhere)
+        implementation "androidx.camera:camera-view:1.1.0"
+
+
+
+    // ExoPlayer for video playback
+    implementation libs.exoplayer.core
+    implementation libs.exoplayer.ui
+
+    // Retrofit for API calls
+    implementation libs.retrofit
+    implementation libs.converter.gson
+
+    // Optional: Glide for image loading if needed
+    implementation libs.glide
+}

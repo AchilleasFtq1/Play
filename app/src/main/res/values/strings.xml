@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Play</string>
+    <string name="logo">logo</string>
+    <string name="base_url">http://your-microservice-url.com/api/</string>
+    <string name="video_name">Video Name</string>
+    <string name="upload_date">Upload Date</string>
+    <string name="todo">TODO</string>
+    <string name="video_thumbnail">video</string>
+    <string name="app_logo">App Logo</string>
+</resources>
